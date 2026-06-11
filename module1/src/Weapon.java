@@ -1,4 +1,4 @@
-final class Weapon { 
+final class Weapon implements Cloneable {
     private int damage;
     private String name;
 
@@ -26,5 +26,14 @@ final class Weapon {
     @Override
     public String toString() {
         return name + "(" + damage + ") dmg";
+    }
+
+    @Override
+    public Weapon clone() {
+        try {
+            return (Weapon) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError(e);
+        }
     }
 }

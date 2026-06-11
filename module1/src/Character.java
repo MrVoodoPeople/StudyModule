@@ -4,7 +4,7 @@ final class Character {
 
     public Character(String name, Weapon weapon) {
         this.name = name;
-        this.weapon = new Weapon(weapon.getName(), weapon.getDamage());
+        this.weapon = weapon.clone();
     }
 
     public String getName() {
@@ -12,7 +12,7 @@ final class Character {
     }
 
     public Weapon getWeapon() {
-        return new Weapon(weapon.getName(), weapon.getDamage());
+        return weapon.clone();
     }
 
     @Override
