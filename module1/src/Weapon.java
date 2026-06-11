@@ -1,4 +1,4 @@
-final class Weapon { //класс оружия
+final class Weapon { 
     private int damage;
     private String name;
 
