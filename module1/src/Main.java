@@ -4,6 +4,7 @@ void main() {
     System.out.println(hero);//вывдод урона оружия, которое мы дали персонажу
     sword.setDamage(1000000);//Пытаемся поменять урон у оружия, которое дано персонажу
     System.out.println(hero);//Выводим урон, что проверить изменилосб ли значение
-    hero.getWeapon().setDamage(1);
+    hero.getWeapon().setDamage(12);
     System.out.println(hero);
+    System.out.println(sword);
 }

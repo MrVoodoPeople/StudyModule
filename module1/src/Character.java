@@ -12,7 +12,7 @@ final class Character {
     }
 
     public Weapon getWeapon() {
-        return weapon;
+        return new Weapon(weapon.getName(), weapon.getDamage());
     }
 
     @Override
