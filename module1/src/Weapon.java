@@ -1,8 +1,12 @@
+
+
 final class Weapon implements Cloneable {
     private int damage;
     private String name;
 
     public Weapon(String name, int damage) {
+        if(name == null) {
+            throw new IllegalArgumentException("Name cannot be null");}
         this.name = name;
         this.damage = damage;
     }
@@ -33,7 +37,7 @@ final class Weapon implements Cloneable {
         try {
             return (Weapon) super.clone();
         } catch (CloneNotSupportedException e) {
-            throw new AssertionError(e);
+            throw new RuntimeException(e);
         }
     }
 }
